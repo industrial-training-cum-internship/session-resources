@@ -1,0 +1,31 @@
+1. Select server
+2. Select a switch
+3. Select a laptop
+4. Select a Wifi router
+5. Select IoT devices (CCTV, Door, Fan, Light etc)
+6. Connect Server with switch using copper stright though cable. use FastEthernet port
+7. Connect Switch with wifi router using copper cross over cable. use FastEthernet port with Ethernet 1 port
+8. Connect Laptop with switch using copper stright though cable. use FastEthernet port
+9. Rename laptop as client, server as IoT server and wisely
+10. GO to Wifi Router and check the IP address.
+11. Go to Server and set the IP address in the range as 192.168.0.10 and set the default gateway address as 192.168.0.1
+12. Go to server and select the service as AAA trun it on and set client name as Home and client IP as 192.168.0.1 and set secret eky as Server1234
+13. set user names and passwords for the IoT devices.
+14. Go to Wifi Router go to GUI and in Wireless tab change the Network name as Home and save.
+15. In GUI of Wifi router go to wireless tab select wireless security and enable it to WPA2 Enterprise,  set the RADIUS Server as 192.168.0.10 (Same as the IP address of the IoT Server).
+    set the secret key as Server1234
+16. Go to IoT device (CCTV),  setect I/O congif and cheange Network Adapter as PT-IOT-NM-1W
+    In config tab select interface as wireless and rename the SSID as Home 
+    In authentication select WPA2 and enter user id and password that is creted at IoT Server (this will connect the IoT device with the switch wirelessly)
+17. Go to IoT Server and in Service tab select IoT and turn it on the Registration Server
+18. Go to Client (laptop) and  go to Desktop and set the IP COnfiguration as DHCP
+    type the URL as 192.168.0.10 (this will open the Server registration)
+    sign up (Set username and Password ) 
+19. Go to IoT devices (CCTV) and in config tab go to IoT Server and select Remote Login and enter Server's IP address and enter user credentials of Server login. Then connnect all the IoT Devices.
+20. Go to Client and in Desktop select IoT Monitor, enter the Server's IP address and user credentials
+21. Play with the IoT Devices and Enjoy your first ever IoT setup.
+ 
+    
+
+
+
